@@ -8,7 +8,7 @@ export class Gachamon {
 
   get buttonHTMLTemplate() {
     return `
-    <button class="btn btn-outline-dark fs-1" title="See details for ${this.name}">
+    <button onclick="app.GachamonsController.setActiveGachamon('${this.name}')" class="btn btn-outline-dark fs-1" title="See details for ${this.name}">
       ${this.emoji}
     </button>
     `

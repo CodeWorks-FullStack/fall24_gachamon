@@ -14,4 +14,10 @@ export class GachamonsController {
     const gachamonsButtonsElem = document.getElementById('gachamons-buttons')
     gachamonsButtonsElem.innerHTML = gachamonHTML
   }
+
+
+  setActiveGachamon(gachamonName) {
+    console.log('setting active gachamon', gachamonName)
+
+  }
 }
