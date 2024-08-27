@@ -1,8 +1,10 @@
 import { AppState } from "../AppState.js";
 
 export class GachamonsController {
+  // NOTE constructors for our controller generally run in page load
   constructor() {
     console.log('The gachamons controller is working');
+    this.drawGachamons()
   }
 
   drawGachamons() {
