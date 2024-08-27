@@ -2,6 +2,11 @@ import { AppState } from "../AppState.js"
 
 class GachamonsService {
   getRandomGachamon() {
+    if (AppState.coins < 1) {
+      window.alert("Please put a coin into the machine, or pay off your debt")
+      return
+    }
+
     const gachamons = AppState.gachamons
     const randomIndex = Math.floor(Math.random() * gachamons.length)
     const randomGachamon = gachamons[randomIndex]

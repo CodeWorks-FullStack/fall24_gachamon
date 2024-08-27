@@ -5,6 +5,9 @@ export class GachamonsController {
   // NOTE constructors for our controller generally run in page load
   constructor() {
     console.log('The gachamons controller is working');
+    AppState.on('activeGachamon', this.drawActiveGachamon)
+
+
     this.drawGachamons()
   }
 
@@ -26,16 +29,9 @@ export class GachamonsController {
   setActiveGachamon(gachamonName) {
     console.log('setting active gachamon', gachamonName)
     gachamonsService.setActiveGachamon(gachamonName)
-    this.drawActiveGachamon()
   }
 
   getRandomGachamon() {
-    if (AppState.coins < 1) {
-      window.alert("Please put a coin into the machine, or pay off your debt")
-      return
-    }
-
     gachamonsService.getRandomGachamon()
-    this.drawActiveGachamon()
   }
 }
