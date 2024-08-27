@@ -6,9 +6,17 @@ export class GachamonsController {
   constructor() {
     console.log('The gachamons controller is working');
     AppState.on('activeGachamon', this.drawActiveGachamon)
+    AppState.on('myGachamons', this.drawMyGachamons)
 
 
     this.drawGachamons()
+  }
+  drawMyGachamons() {
+    const gachamons = AppState.myGachamons
+    let gachamonHTML = ''
+    gachamons.forEach(gachamon => gachamonHTML += gachamon.buttonHTMLTemplate)
+    const gachamonsButtonsElem = document.getElementById('my-gachamons')
+    gachamonsButtonsElem.innerHTML = gachamonHTML
   }
 
   drawGachamons() {

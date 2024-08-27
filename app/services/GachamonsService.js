@@ -14,6 +14,8 @@ class GachamonsService {
     AppState.activeGachamon = randomGachamon
     AppState.coins--
     console.log(AppState.coins);
+
+    AppState.myGachamons.push(randomGachamon)
   }
   setActiveGachamon(gachamonName) {
     console.log('finding gachamon with the name of ' + gachamonName);
