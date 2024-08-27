@@ -15,17 +15,17 @@ export class Gachamon {
   }
 
   get cardHTMLTemplate() {
-    return `
+    return /*html*/`
      <div class="col-12 d-flex justify-content-center">
-      <div class="px-5 py-3 gachamon-card">
+      <div class="px-5 py-3 gachamon-card text-center">
         <p class="display-1">
-          🐘
+          ${this.emoji}
         </p>
         <p class="fs-1">
-          Herbert
+          ${this.name}
         </p>
         <p class="fs-2">
-          Ultra-Rare
+          ${this.rarity}
         </p>
       </div>
     </div>

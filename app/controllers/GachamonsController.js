@@ -16,9 +16,17 @@ export class GachamonsController {
     gachamonsButtonsElem.innerHTML = gachamonHTML
   }
 
+  drawActiveGachamon() {
+    const gachamon = AppState.activeGachamon
+    console.log('active gachamon', gachamon);
+    const gachamonDetailsElem = document.getElementById('gachamon-details')
+    gachamonDetailsElem.innerHTML = gachamon.cardHTMLTemplate
+  }
+
 
   setActiveGachamon(gachamonName) {
     console.log('setting active gachamon', gachamonName)
     gachamonsService.setActiveGachamon(gachamonName)
+    this.drawActiveGachamon()
   }
 }

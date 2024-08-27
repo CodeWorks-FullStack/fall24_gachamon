@@ -5,6 +5,7 @@ import { createObservableProxy } from './utils/ObservableProxy.js'
 class ObservableAppState extends EventEmitter {
   coins = 0
 
+  /**@type {Gachamon[]}*/
   gachamons = [
     new Gachamon('Dog', '🐈‍⬛', 'uncommon'),
     new Gachamon('Sinbad', '🧞', 'legendary'),
@@ -18,6 +19,7 @@ class ObservableAppState extends EventEmitter {
   ]
 
   // NOTE there will not be an active Gachamon on page load, so it is nothing
+  /**@type {Gachamon}*/
   activeGachamon = null
 
 }
