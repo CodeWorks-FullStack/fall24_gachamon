@@ -13,4 +13,22 @@ export class Gachamon {
     </button>
     `
   }
+
+  get cardHTMLTemplate() {
+    return `
+     <div class="col-12 d-flex justify-content-center">
+      <div class="px-5 py-3 gachamon-card">
+        <p class="display-1">
+          🐘
+        </p>
+        <p class="fs-1">
+          Herbert
+        </p>
+        <p class="fs-2">
+          Ultra-Rare
+        </p>
+      </div>
+    </div>
+    `
+  }
 }
