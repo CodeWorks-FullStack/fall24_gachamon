@@ -1,3 +1,5 @@
+import { coinsService } from "../services/CoinsService.js";
+
 export class CoinsController {
   constructor() {
     console.log('The coins controller is working');
@@ -5,5 +7,6 @@ export class CoinsController {
 
   addCoin() {
     console.log('Adding coin!');
+    coinsService.addCoin()
   }
 }
