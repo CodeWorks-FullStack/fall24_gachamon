@@ -23,10 +23,19 @@ export class GachamonsController {
     gachamonDetailsElem.innerHTML = gachamon.cardHTMLTemplate
   }
 
-
   setActiveGachamon(gachamonName) {
     console.log('setting active gachamon', gachamonName)
     gachamonsService.setActiveGachamon(gachamonName)
+    this.drawActiveGachamon()
+  }
+
+  getRandomGachamon() {
+    if (AppState.coins < 1) {
+      window.alert("Please put a coin into the machine, or pay off your debt")
+      return
+    }
+
+    gachamonsService.getRandomGachamon()
     this.drawActiveGachamon()
   }
 }
